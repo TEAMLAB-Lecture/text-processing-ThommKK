@@ -18,7 +18,7 @@ def normalize(input_string):
 
          Parameters:
              input_string (string): 영어로 된 대문자, 소문자, 띄어쓰기, 문장부호, 숫자로 이루어진 string
-             ex - "This is an example.", "   EXTRA   SPACE   "
+             ex - "This is an example.", "ls"
 
          Returns:
              normalized_string (string): 위 요건을 충족시킨 정규회된 string
@@ -33,7 +33,8 @@ def normalize(input_string):
              >>> tp.normalize(input_string2)
              'extra space'
     """
-    normalized_string = None
+    new1 = input_string.lower()
+    normalized_string = ' '.join(new1.split())
     return normalized_string
 
 
@@ -58,5 +59,14 @@ def no_vowels(input_string):
             >>> tp.normalize(input_string2)
             ''W lv Pythn!'
     """
-    no_vowel_string = None
+    new_a = input_string.replace('a','')
+    new_e = new_a.replace('e','')
+    new_i = new_e.replace('i','')
+    new_o = new_i.replace('o','')
+    new_u = new_o.replace('u','')
+    new_A = new_u.replace('A','')
+    new_E = new_A.replace('E','')
+    new_I = new_E.replace('I','')
+    new_O = new_I.replace('O','')
+    no_vowel_string = new_O.replace('U','')
     return no_vowel_string
